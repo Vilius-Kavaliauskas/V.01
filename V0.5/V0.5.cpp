@@ -13,9 +13,6 @@
 #include <chrono>
 
 #include "Studentas.h"
-#include "Studentas_list.h"
-#include "Input.h"
-#include "Output.h"
 #include "Generavimas.h"
 #include "Laikas.h"
 #include "Balas_list.h"
@@ -26,25 +23,11 @@ using namespace std;
 
 int main()
 {
-    string rasymas;
-
-    cout << "Duomenys faile (spausti F) ar rasysite juos pats (spausti R)? "; cin >> rasymas;
-    cout << endl;
-
     vector <studentas> grupe;
-    list <studentas_list> grupe_list;
+    list <studentas> grupe_list;
 
-    //----------------VEKTORIUS-----------------
-    /*
-    input(grupe, rasymas);
-    output(grupe);
-    grupe.clear();
-    */
-
-    //---------------LISTAS---------------------
-
-    input_list(grupe_list, rasymas);
-    output_list(grupe_list);
+    input_list(grupe_list, grupe);
+    output_list(grupe_list, grupe);
     grupe_list.clear();
-
+    grupe.clear();
 }

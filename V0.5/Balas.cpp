@@ -26,5 +26,4 @@ void balas(std::string tipas, std::vector <studentas>& stud)
 
         stud[i] = laikinas;
     }
-
 }

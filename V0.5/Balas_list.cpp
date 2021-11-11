@@ -5,16 +5,16 @@
 #include <numeric>
 #include <iterator>
 
-#include "Studentas_list.h"
+#include "Studentas.h"
 
-void balas_list(std::string tipas, std::list <studentas_list>& stud)
+void balas_list(std::string tipas, std::list <studentas>& stud)
 {
     int kiek = stud.size();
     auto stud_front = stud.begin();
 
     for (int i = 0; i < kiek; i++)
     {
-        studentas_list laikinas = *stud_front;
+        studentas laikinas = *stud_front;
 
         if (tipas == "V")
         {
@@ -23,7 +23,7 @@ void balas_list(std::string tipas, std::list <studentas_list>& stud)
 
         else if (tipas == "M")
         {
-            laikinas.nd.sort();
+            std::sort(laikinas.nd.begin(), laikinas.nd.end());
 
             auto nd_front = laikinas.nd.begin();
             int vid = laikinas.nd.size();
@@ -42,9 +42,7 @@ void balas_list(std::string tipas, std::list <studentas_list>& stud)
                 laikinas.galutinis = (mediana2 + mediana1) / 2 * 0.4 + 0.6 * laikinas.egz;
             }
         }
-
         *stud_front = laikinas;
         advance(stud_front, 1);
     }
-
 }

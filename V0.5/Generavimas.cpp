@@ -11,7 +11,7 @@ void generuok(int kiek_paz, int stud_kiek)
 {
 	using namespace std;
 
-	ofstream OUT("kursiokai_laikinas.txt");
+	ofstream OUT("kursiokai_laikinas_test.txt");
 	random_device rd;
 	mt19937_64 mt(rd());
 	uniform_int_distribution<int> dist(0, 10);
@@ -27,7 +27,7 @@ void generuok(int kiek_paz, int stud_kiek)
 		string kelintas = to_string(i);
 
 		OUT << setw(20) << left << "Vardas" + kelintas << setw(20) << left << "Pavarde" + kelintas;
-		for (int j = 0; j < kiek_paz; j++) {OUT << setw(3) <<dist(mt) << ' '; }
+		for (int j = 0; j < kiek_paz; j++) { OUT << setw(3) << dist(mt) << ' '; }
 		OUT << dist(mt) << endl;
 	}
 	OUT.close();

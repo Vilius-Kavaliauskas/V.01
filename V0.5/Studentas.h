@@ -1,9 +1,6 @@
 #ifndef STUDENTAS_H
 #define STUDENTAS_H
 
-//#include <string>
-//#include <vector>
-
 struct studentas
 {
     std::string vardas;
@@ -12,4 +9,5 @@ struct studentas
     int egz;
     double galutinis;
 };
+
 #endif // !STUDENTAS_H
